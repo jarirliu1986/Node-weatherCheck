@@ -19,6 +19,15 @@ if (typeof argv.l ==='string' && argv.l.length > 0) {
 	})
 }else{
 	console.log('no given location');
+	location(function (location) {
+		if (location) {
+			weather(location.city, function (currentWeather) {
+				console.log(currentWeather);
+			})
+		}else{
+			console.log('unable to guess location');
+		}
+	})
 }
 
 

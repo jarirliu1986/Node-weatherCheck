@@ -7,7 +7,7 @@ module.exports = function (callback) {
 		json: true
 	}, function (error, response, body) {
 		if (error) {
-			callback('unable fetch location!');
+			callback();
 		}else{
 			//callback(JSON.stringify(body,null,4));
 			callback(body);
